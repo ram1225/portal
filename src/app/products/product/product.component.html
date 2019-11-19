@@ -1,0 +1,19 @@
+<mat-card class="eshop-card">
+  <mat-card-title>
+    {{product.productName}}
+  </mat-card-title>
+  <mat-card-subtitle>{{product.productCategory}}</mat-card-subtitle>
+  <img mat-card-image src="../../../assets/images/bag.jpg" alt="Photo of product">
+  <mat-card-content>
+    <p>
+      {{product.productDescription}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <p class="card-footer">
+      <button mat-button class="add-cart-btn" (click)="addToCart($event,product)">Add to Cart</button>
+      <span mat-button><span class="price">Price</span> {{product.productPrice | currency}}</span>
+    </p>
+
+  </mat-card-actions>
+</mat-card>

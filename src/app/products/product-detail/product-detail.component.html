@@ -1,0 +1,6 @@
+<eshop-product [product]="product" *ngIf="!nodataExist">
+
+</eshop-product>
+<div *ngIf="nodataExist" class="nodata">
+    <h3>{{nodata}}</h3>
+</div>

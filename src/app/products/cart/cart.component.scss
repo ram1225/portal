@@ -1,0 +1,28 @@
+$eshop-color: #2387AA;
+
+.cart-container{
+    margin-left: -5em;
+    margin-top: 5em;
+    color: black;
+
+    .checkout-actions-container{
+        background: #f3f3f3;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 54px;
+        p.card-footer{
+            position: absolute;
+            right: 0;
+            margin-right: 250px;
+            bottom: 0;
+            height: 30px;
+            .checkout-cart-btn,.delete-cart-btn{
+                background-color: $eshop-color;
+                color: white;
+                margin: 5px;
+            }
+        }        
+    }
+}

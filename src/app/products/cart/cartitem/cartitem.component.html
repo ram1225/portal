@@ -1,0 +1,22 @@
+<mat-card class="eshop-cart-item">
+  <img mat-card-image src="../../../assets/images/bag.jpg" class="cart-image" alt="Photo of product">
+  <div class="details">
+    <mat-card-title>
+      {{product.productName}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      <span id="category">Category:</span>
+      {{product.productCategory}}
+    </mat-card-subtitle>
+
+    <mat-card-content>
+      <p>
+        {{product.productDescription}}
+      </p>
+      <p>
+         <span>Price: </span> {{product.productPrice | currency}}
+      </p>
+    </mat-card-content>
+    <button mat-button class="delete-cart-btn" (click)="deleteToCart($event,product)">Delete</button>
+  </div>
+</mat-card>

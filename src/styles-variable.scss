@@ -1,0 +1,54 @@
+.eshop-mat-icon.md-14 {
+  font-size: 14px;
+}
+
+.eshop-mat-icon.md-18 {
+  font-size: 18px;
+}
+
+.eshop-mat-icon.md-24 {
+  font-size: 24px;
+}
+
+.eshop-mat-icon.md-36 {
+  font-size: 36px;
+}
+
+.eshop-mat-icon.md-48 {
+  font-size: 48px;
+}
+
+.eshop-mat-icons {
+  vertical-align: middle;
+}
+
+/* eshop Mixin for layout  system */
+@mixin eshop-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin eshop-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin eshop-tablet-portait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin eshop-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin eshop-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin eshop-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin eshop-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin eshop-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+@mixin eshop-desktop-below {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}

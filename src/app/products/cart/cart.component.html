@@ -1,0 +1,16 @@
+<div class="cart-container">
+  <div *ngIf="totalCartItems <= 0">
+    <h3>Looks like you haven't added items to Cart!</h3>
+  </div>
+  <div *ngIf="totalCartItems > 0">
+    <ng-container *ngFor="let product of cartlist">
+      <cart-item [Product]="product"></cart-item>
+    </ng-container>
+  </div>
+  <div *ngIf="totalCartItems > 0" class="checkout-actions-container">
+    <p class="card-footer">
+      <button mat-button class="checkout-cart-btn" (click)="addToCart($event,product)">PLACE ORDER</button>
+      <!-- <button mat-button class="delete-cart-btn" (click)="deleteToCart($event,product)">Delete</button> -->
+    </p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+$eshop-color: #2387AA;
+
+div{
+    margin-top: -1.5em;
+    h3{
+        margin-left: 25px;
+    }
+    a{
+        padding: 5px  5px 5px 25px;
+        text-decoration: none;
+        font-size: 20px;
+        color: $eshop-color !important;
+        display: block;
+    }
+}

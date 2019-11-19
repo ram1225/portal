@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="product-container">
+    <ng-container *ngFor="let product of productlist">
+        <eshop-product [product]="product" (click)="gotoDetails(product)"></eshop-product>
+    </ng-container>
+  </div>
+</div>

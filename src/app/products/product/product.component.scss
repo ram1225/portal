@@ -1,0 +1,22 @@
+$eshop-color: #2387AA;
+
+.eshop-card {
+    max-width: 300px;
+    margin: 5px;
+
+    .add-cart-btn {
+      background: $eshop-color;
+      color: white;
+    }
+
+    p.card-footer {
+        display: flex;
+        align-items: center;
+      span {
+        margin-left: auto;
+        span.price{
+            font-weight: bold;
+        }
+      }
+    }
+  }

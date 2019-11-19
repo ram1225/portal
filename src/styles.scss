@@ -1,1 +1,133 @@
 /* You can add global styles to this file, and also import other style files */
+@import "themes/eshop-custom-theme.scss";
+
+$eshop-color: #2387AA;
+
+.eshop-mat-icon.md-14 {
+  font-size: 14px;
+}
+
+.eshop-mat-icon.md-18 {
+  font-size: 18px;
+}
+
+.eshop-mat-icon.md-24 {
+  font-size: 24px;
+}
+
+.eshop-mat-icon.md-36 {
+  font-size: 36px;
+}
+
+.eshop-mat-icon.md-48 {
+  font-size: 48px;
+}
+
+.eshop-mat-icons {
+  vertical-align: middle;
+}
+
+/* eshop Mixin for layout  system */
+@mixin eshop-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin eshop-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin eshop-tablet-portait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin eshop-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin eshop-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin eshop-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin eshop-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin eshop-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+@mixin eshop-desktop-below {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+// *********************************************************
+
+
+html, body { height: 100%; }
+
+// declaring custom font type
+@font-face {
+    font-family: "Roboto", sans-serif;
+    src: url('assets/fonts/Roboto.ttf') format('truetype');
+  }
+
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;   
+  width: 100vw;
+  height: 100vh;
+  color: black;
+}
+
+
+.body-container {
+  background-color: #EBF0F5;
+}
+.sidenav-container{
+  height: 100%;
+  width: 15vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f3f3f3;
+  border-right: 1px #ddd solid;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top: $mat-toolbar-height-desktop ;
+}
+
+.router-container {
+  margin-top: $mat-toolbar-height-desktop + 10px;
+  margin-left: 25em;
+  margin-right: $eshop-router-margin-right + 10px;
+
+  // @media ($mat-xsmall) {
+  @include eshop-desktop-below {
+    margin-top: $mat-toolbar-height-mobile;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+}
+
+.mat-button:focus .mat-button-focus-overlay {
+  background-color: transparent;
+}
+
+.mat-sidenav,
+.mat-sidenav-container {
+  background-color: #EBF0F5;
+}
+
+
+
+.eshop-color {
+  color: $eshop-color;
+}
+
+.eshop-text-center {
+  text-align: center;
+}
+
+
+
+

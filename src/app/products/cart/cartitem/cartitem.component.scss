@@ -1,0 +1,27 @@
+.eshop-cart-item {
+  display: flex;
+  margin: 10px;
+
+  .cart-image {
+    width: 150px;
+    height: 150px;
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+
+  .details {
+    margin-left: 25px;
+
+    #category {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .delete-cart-btn {
+      position: absolute;
+      right: 0;
+      margin-right: 2em;
+      background-color: #dddddd;
+    }
+  }
+}
